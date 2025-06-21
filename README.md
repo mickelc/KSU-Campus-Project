@@ -11,16 +11,16 @@ This project is a Cisco Packet Tracer lab that simulates a multi-site campus net
 * A Cloud Router interconnects the two campuses.
 
 # Router Configuration
-After creating each depatment and connecting all the devices to their respective switches, I went into each of the three routers and changed all their interfaces to the up state
+After setting up each department and connecting their devices to the appropriate switches, I accessed all three routers and brought their interfaces to the operational (up) state.
 
 ![image](https://github.com/user-attachments/assets/b3a3b46b-fe22-426c-aed4-1bca26df6a66)
 ![image](https://github.com/user-attachments/assets/0b36542e-18f7-4e02-96b8-de094a22c852)
 ![image](https://github.com/user-attachments/assets/836a46f5-9d3f-4b72-8d9b-1f124349f097)
 
 # Switch Configuration
-Went into all the layer 2 switches on the main campus and the branch campus (the access layer) and assigned them their respective vlans
+I configured all Layer 2 switches across both the main and branch campuses (access layer) by assigning the appropriate VLANs to each port based on departmental requirements.
 
-### Below was the input performed for the Human Resource Department. This was done for all the departments 
+### The following configuration was applied to the Human Resources Department. A similar setup was implemented for each of the other departments as well. 
 ![image](https://github.com/user-attachments/assets/c51cf244-f5be-482c-82bf-6f724b317903)
 
 # Layer 3 Switch Configuration
@@ -30,11 +30,11 @@ Next was to move up the layer 3 swtiches on both branches (the distribution laye
 ![image](https://github.com/user-attachments/assets/17eb97fe-8407-4e72-8fdd-c7ca09561328)
 
 # Subinterface creation and VLAN tagging
-The configurations in the image below was done on the branch router to allow devices on VLAN 90 and VLAN 100 to communicate through the router. This process was repeated on the main campus router as well for all the 8 VLANS on the main campus. 
+The configuration shown below was applied on the branch router to enable inter-VLAN communication between devices on VLAN 90 and VLAN 100. The same procedure was done on the main campus router to support communication across all eight VLANs.
 ![image](https://github.com/user-attachments/assets/a167951d-548a-4c1a-aa1a-92e6af32708b)
 
 # DHCP Configuration
-Serviced dhcp on the branch and main campus routers so each device would get their IPv4 IP address through DHCP.
+Configured DHCP services on both the branch and main campus routers to ensure all devices received their IPv4 addresses dynamically.
 
 ### Main Campus Router:
 ![image](https://github.com/user-attachments/assets/5cc04832-3e44-4d27-8f6d-a317e9fbb486)
