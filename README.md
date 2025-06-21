@@ -8,7 +8,7 @@ This project is a Cisco Packet Tracer lab that simulates a multi-site campus net
 
 * The Branch Campus connects 2 Layer 2 switches via a Layer 3 switch, which connects to the Branch Router.
 
-* A Cloud Router interconnects the two campuses.
+* A Cloud Router is connected to an Email Server
 
 # Router Configuration
 After setting up each department and connecting their devices to the appropriate switches, I accessed all three routers and brought their interfaces to the operational (up) state.
