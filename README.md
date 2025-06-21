@@ -59,10 +59,10 @@ To allow the router to dynamically share and learn routes, I used RIP v2 instead
 Admin PC (Main Campus) to Student Lab PC (Branch Campus)
 ![image](https://github.com/user-attachments/assets/c20964c3-adfb-4907-98e2-7c913b42684b)
 
-Staff PC (Branch Campus) → Business PC (Main Campus)
+Staff PC (Branch Campus) to Business PC (Main Campus)
 ![image](https://github.com/user-attachments/assets/9f354895-088b-4b3a-b7cb-a543aef0cf49)
 
-IT PC (Main Campus) → Email Server (Cloud Network)
+IT PC (Main Campus) to Email Server (Cloud Network)
 ![image](https://github.com/user-attachments/assets/62d98007-a2f4-41c5-a0e7-f2077870535a)
 
 ### All pings were successful, verifying end-to-end connectivity and proper configuration of inter-VLAN routing, DHCP, and RIPv2.
