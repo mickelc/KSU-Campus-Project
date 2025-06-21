@@ -1,1 +1,80 @@
-# KSU-Campus-Project
+# Campus Network Simulation
+This project is a Cisco Packet Tracer lab that simulates a multi-site campus network (similar to my alma mater) with a Main Campus, a Branch Campus, and a Cloud Network. It includes VLAN segmentation, inter-VLAN routing, DHCP services, RIP version 2 for routing between campuses, and connectivity tests across departments and locations.
+
+# Network Topology
+![image](https://github.com/user-attachments/assets/376f1e3e-003a-417b-b270-17e7c125cdc1)
+
+* The Main Campus connects to 8 Layer 2 department switches via a Layer 3 switch, which links to the Main Campus Router.
+
+* The Branch Campus connects 2 Layer 2 switches via a Layer 3 switch, which connects to the Branch Router.
+
+* A Cloud Router interconnects the two campuses.
+
+# Router Configuration
+After creating each depatment and connecting all the devices to their respective switches, I went into each of the three routers and changed all their interfaces to the up state
+
+![image](https://github.com/user-attachments/assets/b3a3b46b-fe22-426c-aed4-1bca26df6a66)
+![image](https://github.com/user-attachments/assets/0b36542e-18f7-4e02-96b8-de094a22c852)
+![image](https://github.com/user-attachments/assets/836a46f5-9d3f-4b72-8d9b-1f124349f097)
+
+# Switch Configuration
+Went into all the layer 2 switches on the main campus and the branch campus (the access layer) and assigned them their respective vlans
+
+### Below was the input performed for the Human Resource Department. This was done for all the departments 
+![image](https://github.com/user-attachments/assets/c51cf244-f5be-482c-82bf-6f724b317903)
+
+# Layer 3 Switch Configuration
+Next was to move up the layer 3 swtiches on both branches (the distribution layer) and set each switch ports to access mode.
+
+### Below was done on the main campus L3 switch. This process was repeated for each VLAN
+![image](https://github.com/user-attachments/assets/17eb97fe-8407-4e72-8fdd-c7ca09561328)
+
+# Subinterface creation and VLAN tagging
+The configurations in the image below was done on the branch router to allow devices on VLAN 90 and VLAN 100 to communicate through the router. This process was repeated on the main campus router as well for all the 8 VLANS on the main campus. 
+![image](https://github.com/user-attachments/assets/a167951d-548a-4c1a-aa1a-92e6af32708b)
+
+# DHCP Configuration
+Serviced dhcp on the branch and main campus routers so each device would get their IPv4 IP address through DHCP.
+
+### Main Campus Router:
+![image](https://github.com/user-attachments/assets/5cc04832-3e44-4d27-8f6d-a317e9fbb486)
+
+### Branch Campus Router:
+![image](https://github.com/user-attachments/assets/5a9e5e56-bff8-4c9d-940b-aee4e2a03430)
+
+# Routing Configurations
+To allow the router to dynamically share and learn routes, I used RIP v2 instead of relying on static routes. Below is the commands entered on all three routers
+
+### Main Campus Router:
+![image](https://github.com/user-attachments/assets/432382ac-eef7-478d-9777-0b288a56739b)
+
+### Branch Campus Router:
+![image](https://github.com/user-attachments/assets/e25391aa-b7d8-49e2-8476-d917440fd081)
+
+### Cloud Router:
+![image](https://github.com/user-attachments/assets/cb5c7839-0177-45cf-bda1-91c12ef9408b)
+
+# Connectivity Tests
+### Ping Tests Conducted:
+Admin PC (Main Campus) to Student Lab PC (Branch Campus)
+![image](https://github.com/user-attachments/assets/c20964c3-adfb-4907-98e2-7c913b42684b)
+
+Staff PC (Branch Campus) → Business PC (Main Campus)
+![image](https://github.com/user-attachments/assets/9f354895-088b-4b3a-b7cb-a543aef0cf49)
+
+IT PC (Main Campus) → Email Server (Cloud Network)
+![image](https://github.com/user-attachments/assets/62d98007-a2f4-41c5-a0e7-f2077870535a)
+
+### All pings were successful, verifying end-to-end connectivity and proper configuration of inter-VLAN routing, DHCP, and RIPv2.
+
+# Summary & Takeaways
+### Through this project, I strengthened my skills in:
+
+* Designing scalable campus-wide network architectures
+* VLAN creation and trunking across complex multi-switch environments
+* Configuring inter-VLAN routing on multiple routers
+* Implementing DHCP services across VLANs
+* Setting up RIP version 2 for multi-site routing
+* Troubleshooting and verifying routing tables and device connectivity
+
+See packet tracer file in repository for the Campus file
