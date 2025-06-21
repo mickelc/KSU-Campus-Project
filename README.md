@@ -29,7 +29,7 @@ Next was to move up the layer 3 swtiches on both branches (the distribution laye
 ### Below was done on the main campus L3 switch. This process was repeated for each VLAN
 ![image](https://github.com/user-attachments/assets/17eb97fe-8407-4e72-8fdd-c7ca09561328)
 
-# Subinterface creation and VLAN tagging
+# Subinterface Creation and VLAN Tagging
 The configuration shown below was applied on the branch router to enable inter-VLAN communication between devices on VLAN 90 and VLAN 100. The same procedure was done on the main campus router to support communication across all eight VLANs.
 ![image](https://github.com/user-attachments/assets/a167951d-548a-4c1a-aa1a-92e6af32708b)
 
